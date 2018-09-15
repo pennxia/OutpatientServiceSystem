@@ -1,0 +1,904 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:fitsSystemWindows="true"
+    tools:context=".activity.UserAgreementActivity">
+
+    <!-- toolbar -->
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/activity_user_agreement_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|enterAlways|snap"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <TextView
+                android:id="@+id/activity_main_toolbar_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="用户协议"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/textsize_large" />
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <!-- content -->
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:orientation="vertical">
+
+            <!-- 声明 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="声明"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/textsize_large"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/user_agreement_1"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/textsize_normal" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/user_agreement_2"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/textsize_normal" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/user_agreement_3"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/textsize_normal" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/user_agreement_4"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/textsize_normal" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/user_agreement_5"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/textsize_normal" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/user_agreement_6"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/textsize_normal" />
+
+            <!-- 门诊服务系统用户协议 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="门诊服务系统用户协议"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/textsize_large"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/user_agreement_7"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/textsize_normal" />
+
+            <!-- 第一条、本协议的确认和接纳 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:textStyle="bold"
+                android:text="第一条、本协议的确认和接纳"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/textsize_large" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/user_agreement_8"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/textsize_normal" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/user_agreement_9"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/textsize_normal" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/user_agreement_10"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/textsize_normal" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/user_agreement_11"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/textsize_normal" />
+
+            <!-- 第二条、服务简介 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:textStyle="bold"
+                android:text="第二条、服务简介"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/textsize_large" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/user_agreement_12"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/textsize_normal" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/user_agreement_13"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/textsize_normal" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/user_agreement_14"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/textsize_normal" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/user_agreement_15"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/textsize_normal" />
+
+            <!-- 第三条、服务暂停、变更与终止条款 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:textStyle="bold"
+                android:text="第三条、服务暂停、变更与终止条款"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/textsize_large" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/user_agreement_16"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/textsize_normal" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/user_agreement_17"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/textsize_normal" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/user_agreement_18"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/textsize_normal" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/user_agreement_19"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/textsize_normal" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/user_agreement_20"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/textsize_normal" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/user_agreement_21"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/textsize_normal" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/user_agreement_22"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/textsize_normal" />
+
+            <!-- 第四条、用户信息 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:textStyle="bold"
+                android:text="第四条、用户信息"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/textsize_large" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/user_agreement_23"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/textsize_normal" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/user_agreement_24"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/textsize_normal" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/user_agreement_25"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/textsize_normal" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/user_agreement_26"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/textsize_normal" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/user_agreement_27"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/textsize_normal" />
+
+            <!-- 第五条、服务内容 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:textStyle="bold"
+                android:text="第五条、服务内容"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/textsize_large" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/user_agreement_28"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/textsize_normal" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/user_agreement_29"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/textsize_normal" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/user_agreement_30"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/textsize_normal" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/user_agreement_31"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/textsize_normal" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/user_agreement_32"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/textsize_normal" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/user_agreement_33"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/textsize_normal" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/user_agreement_34"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/textsize_normal" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/user_agreement_35"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/textsize_normal" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/user_agreement_36"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/textsize_normal" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/user_agreement_37"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/textsize_normal" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/user_agreement_38"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/textsize_normal" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/user_agreement_39"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/textsize_normal" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/user_agreement_40"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/textsize_normal" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/user_agreement_41"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/textsize_normal" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/user_agreement_42"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/textsize_normal" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/user_agreement_43"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/textsize_normal" />
+
+            <!-- 第六条、门诊服务系统的权利和义务 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:textStyle="bold"
+                android:text="第六条、门诊服务系统的权利和义务"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/textsize_large" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/user_agreement_44"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/textsize_normal" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/user_agreement_45"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/textsize_normal" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/user_agreement_46"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/textsize_normal" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/user_agreement_47"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/textsize_normal" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/user_agreement_48"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/textsize_normal" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/user_agreement_49"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/textsize_normal" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/user_agreement_50"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/textsize_normal" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/user_agreement_51"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/textsize_normal" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/user_agreement_52"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/textsize_normal" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/user_agreement_53"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/textsize_normal" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/user_agreement_54"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/textsize_normal" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/user_agreement_55"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/textsize_normal" />
+
+            <!-- 第七条、隐私保护 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:textStyle="bold"
+                android:text="第七条、隐私保护"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/textsize_large" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/user_agreement_56"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/textsize_normal" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/user_agreement_57"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/textsize_normal" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/user_agreement_58"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/textsize_normal" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/user_agreement_59"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/textsize_normal" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/user_agreement_60"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/textsize_normal" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/user_agreement_61"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/textsize_normal" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/user_agreement_62"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/textsize_normal" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/user_agreement_63"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/textsize_normal" />
+
+            <!-- 第八条、特别授权 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:textStyle="bold"
+                android:text="第八条、特别授权"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/textsize_large" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="你完全理解并不可撤销地授予本客户端下列权利："
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/textsize_normal" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/user_agreement_64"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/textsize_normal" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/user_agreement_65"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/textsize_normal" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/user_agreement_66"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/textsize_normal" />
+
+            <!-- 第九条、所有权及知识产权条款 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:textStyle="bold"
+                android:text="第九条、所有权及知识产权条款"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/textsize_large" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/user_agreement_67"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/textsize_normal" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/user_agreement_68"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/textsize_normal" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/user_agreement_69"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/textsize_normal" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/user_agreement_70"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/textsize_normal" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/user_agreement_71"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/textsize_normal" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/user_agreement_72"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/textsize_normal" />
+
+            <!-- 第十条、责任限制及不承诺担保 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:textStyle="bold"
+                android:text="第十条、责任限制及不承诺担保"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/textsize_large" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/user_agreement_73"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/textsize_normal" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/user_agreement_74"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/textsize_normal" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/user_agreement_75"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/textsize_normal" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/user_agreement_76"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/textsize_normal" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/user_agreement_77"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/textsize_normal" />
+
+            <!-- 第十一条、有限责任 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:textStyle="bold"
+                android:text="第十一条、有限责任"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/textsize_large" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/user_agreement_78"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/textsize_normal" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/user_agreement_79"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/textsize_normal" />
+
+            <!-- 第十二条、广告说明 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:textStyle="bold"
+                android:text="第十二条、广告说明"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/textsize_large" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/user_agreement_80"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/textsize_normal" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/user_agreement_81"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/textsize_normal" />
+
+            <!-- 第十三条、法律管辖和适用 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:textStyle="bold"
+                android:text="第十三条、法律管辖和适用"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/textsize_large" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/user_agreement_82"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/textsize_normal" />
+
+            <!-- 第十四条、其他 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:textStyle="bold"
+                android:text="第十四条、其他"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/textsize_large" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="NobitaStudio 保留最终解释权"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/textsize_normal" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="48dp"
+                android:text="2018 年 7 月 1 日"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/textsize_normal" />
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:fitsSystemWindows="true"
+    tools:context=".fragment.MessageCenterFragment">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- show all sub function and menu-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!-- diaplay diagnosis message -->
+            <LinearLayout
+                android:id="@+id/fragment_personalcenter_diagnosis_linearlayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- display function icon and name -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginTop="4dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="52dp"
+                        android:layout_height="52dp"
+                        android:layout_marginLeft="20dp"
+                        android:src="@drawable/ic_diagnosis_message" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_weight="1"
+                        android:text="就医信息"
+                        android:textColor="@color/colorGrayDeep"
+                        android:textSize="@dimen/textsize_large" />
+
+                    <ImageView
+                        android:id="@+id/fragment_personalcenter_diagnosisdot_imageview"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_marginRight="8dp"
+                        android:src="@drawable/ic_dot"
+                        android:visibility="invisible" />
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginRight="16dp"
+                        android:src="@drawable/ic_arrow_right" />
+                </LinearLayout>
+
+                <!--Segmenting line-->
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/colorGray" />
+
+            </LinearLayout>
+
+            <!-- diaplay appointment message -->
+            <LinearLayout
+                android:id="@+id/fragment_personalcenter_appointment_linearlayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <!-- display function icon and name -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginTop="4dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="52dp"
+                        android:layout_height="52dp"
+                        android:layout_marginLeft="20dp"
+                        android:src="@drawable/ic_appointment_message" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_weight="1"
+                        android:text="预约信息"
+                        android:textColor="@color/colorGrayDeep"
+                        android:textSize="@dimen/textsize_large" />
+
+                    <ImageView
+                        android:id="@+id/fragment_personalcenter_appointmentdot_imageview"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_marginRight="8dp"
+                        android:src="@drawable/ic_dot"
+                        android:visibility="invisible" />
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginRight="16dp"
+                        android:src="@drawable/ic_arrow_right" />
+                </LinearLayout>
+
+                <!--Segmenting line-->
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/colorGray" />
+
+            </LinearLayout>
+
+            <!-- check and inspection message -->
+            <LinearLayout
+                android:id="@+id/fragment_personalcenter_checkinspection_linearlayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <!-- display function icon and name -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginTop="4dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="52dp"
+                        android:layout_height="52dp"
+                        android:layout_marginLeft="20dp"
+                        android:src="@drawable/ic_checkinspection_message" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_weight="1"
+                        android:text="检查检验信息"
+                        android:textColor="@color/colorGrayDeep"
+                        android:textSize="@dimen/textsize_large" />
+
+                    <ImageView
+                        android:id="@+id/fragment_personalcenter_checkinspectiondot_imageview"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_marginRight="8dp"
+                        android:src="@drawable/ic_dot"
+                        android:visibility="invisible" />
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginRight="16dp"
+                        android:src="@drawable/ic_arrow_right" />
+                </LinearLayout>
+
+                <!--Segmenting line-->
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/colorGray" />
+
+            </LinearLayout>
+
+            <!-- diaplay payment message -->
+            <LinearLayout
+                android:id="@+id/fragment_personalcenter_payment_linearlayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <!-- display function icon and name -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginTop="4dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="52dp"
+                        android:layout_height="52dp"
+                        android:layout_marginLeft="20dp"
+                        android:src="@drawable/ic_payment" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_weight="1"
+                        android:text="缴费信息"
+                        android:textColor="@color/colorGrayDeep"
+                        android:textSize="@dimen/textsize_large" />
+
+                    <ImageView
+                        android:id="@+id/fragment_personalcenter_paymentdot_imageview"
+                        android:layout_width="16dp"
+                        android:layout_height="14dp"
+                        android:layout_marginRight="8dp"
+                        android:src="@drawable/ic_dot"
+                        android:visibility="invisible" />
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginRight="16dp"
+                        android:src="@drawable/ic_arrow_right" />
+                </LinearLayout>
+
+                <!--Segmenting line-->
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/colorGray" />
+
+            </LinearLayout>
+
+            <!-- diaplay service message -->
+            <LinearLayout
+                android:id="@+id/fragment_personalcenter_service_linearlayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <!-- display function icon and name -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginTop="4dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="52dp"
+                        android:layout_height="52dp"
+                        android:layout_marginLeft="20dp"
+                        android:src="@drawable/ic_service_message" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_weight="1"
+                        android:text="服务信息"
+                        android:textColor="@color/colorGrayDeep"
+                        android:textSize="@dimen/textsize_large" />
+
+                    <ImageView
+                        android:id="@+id/fragment_personalcenter_servicedot_imageview"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_marginRight="8dp"
+                        android:src="@drawable/ic_dot"
+                        android:visibility="invisible" />
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginRight="16dp"
+                        android:src="@drawable/ic_arrow_right" />
+                </LinearLayout>
+
+                <!--Segmenting line-->
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/colorGray" />
+
+            </LinearLayout>
+
+            <!--Segmenting line-->
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginTop="24dp"
+                android:background="@color/colorGray" />
+
+            <!-- diaplay announcement message -->
+            <LinearLayout
+                android:id="@+id/fragment_personalcenter_announcement_linearlayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- display function icon and name -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginTop="4dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+
+                    <ImageView
+                        android:layout_width="52dp"
+                        android:layout_height="52dp"
+                        android:layout_marginLeft="20dp"
+                        android:src="@drawable/ic_announcement_message" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_weight="1"
+                        android:text="公告栏"
+                        android:textColor="@color/colorGrayDeep"
+                        android:textSize="@dimen/textsize_large" />
+
+                    <ImageView
+                        android:id="@+id/fragment_personalcenter_announcementdot_imageview"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_marginRight="8dp"
+                        android:src="@drawable/ic_dot"
+                        android:visibility="invisible" />
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginRight="16dp"
+                        android:src="@drawable/ic_arrow_right" />
+                </LinearLayout>
+
+                <!--Segmenting line-->
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/colorGray" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</android.support.design.widget.CoordinatorLayout>

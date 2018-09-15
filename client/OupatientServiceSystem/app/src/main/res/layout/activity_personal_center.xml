@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".activity.PersonalCenterActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlayNoShadow">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/activity_personal_center_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/textsize_large"
+                android:textColor="@color/colorWhite"
+                android:text="个人中心"
+                android:layout_gravity="center"/>
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:orientation="vertical">
+
+        <!-- show user head image and username -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:background="@color/colorPrimary"
+            android:orientation="horizontal">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/activity_personal_center_user_imageView"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="32dp"
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:src="@drawable/ic_user"
+                android:contentDescription="@string/nav_header_desc"
+                android:paddingTop="@dimen/nav_header_vertical_spacing"
+                app:civ_border_width="2dp"
+                app:civ_border_color="#00000000" />
+
+            <TextView
+                android:id="@+id/activity_personal_center_username_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="用户名称"
+                android:textSize="@dimen/textsize_large"
+                android:textColor="@color/colorWhite"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="16dp"
+                />
+
+
+        </LinearLayout>
+
+        <!-- show all sub function and menu-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!-- diaplay my order -->
+            <LinearLayout
+                android:id="@+id/activity_personal_center_myorder_linearlayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+                <!-- display function icon and name -->
+                <LinearLayout
+                    android:gravity="center_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_marginLeft="20dp"
+                        android:layout_width="52dp"
+                        android:layout_height="52dp"
+                        android:src="@drawable/ic_order"/>
+
+                    <TextView
+                        android:layout_marginLeft="16dp"
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/textsize_large"
+                        android:textColor="@color/colorGrayDeep"
+                        android:text="我的订单"/>
+
+                    <ImageView
+                        android:layout_marginRight="16dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_arrow_right"/>
+                </LinearLayout>
+
+                <!--Segmenting line-->
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/colorGray"
+                    />
+
+            </LinearLayout>
+
+            <!-- diaplay my medicalcards -->
+            <LinearLayout
+                android:id="@+id/activity_personal_center_mymedicalcards_linearlayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+                <!-- display function icon and name -->
+                <LinearLayout
+                    android:gravity="center_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_width="42dp"
+                        android:layout_height="42dp"
+                        android:layout_marginLeft="20dp"
+                        android:src="@drawable/ic_medicalcard"/>
+
+                    <TextView
+                        android:layout_marginLeft="16dp"
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/textsize_large"
+                        android:textColor="@color/colorGrayDeep"
+                        android:text="我的诊疗卡"/>
+
+                    <ImageView
+                        android:layout_marginRight="16dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_arrow_right"/>
+                </LinearLayout>
+
+                <!--Segmenting line-->
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/colorGray"
+                    />
+
+            </LinearLayout>
+
+            <!-- diaplay my doctors -->
+            <LinearLayout
+                android:id="@+id/activity_personal_center_mydoctors_linearlayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+                <!-- display function icon and name -->
+                <LinearLayout
+                    android:gravity="center_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginBottom="6dp"
+                        android:layout_width="46dp"
+                        android:layout_marginRight="6dp"
+                        android:layout_height="46dp"
+                        android:src="@drawable/ic_doctor2"/>
+
+                    <TextView
+                        android:layout_marginLeft="16dp"
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/textsize_large"
+                        android:textColor="@color/colorGrayDeep"
+                        android:text="我的医生"/>
+
+                    <ImageView
+                        android:layout_marginRight="16dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_arrow_right"/>
+                </LinearLayout>
+
+                <!--Segmenting line-->
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/colorGray"
+                    />
+
+            </LinearLayout>
+
+            <!-- diaplay my electronic case -->
+            <LinearLayout
+                android:id="@+id/activity_personal_center_myelectroniccase_linearlayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+                <!-- display function icon and name -->
+                <LinearLayout
+                    android:gravity="center_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_width="42dp"
+                        android:layout_height="42dp"
+                        android:src="@drawable/ic_case"/>
+
+                    <TextView
+                        android:layout_marginLeft="16dp"
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/textsize_large"
+                        android:textColor="@color/colorGrayDeep"
+                        android:text="我的电子病历"/>
+
+                    <ImageView
+                        android:layout_marginRight="16dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_arrow_right"/>
+                </LinearLayout>
+
+                <!--Segmenting line-->
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/colorGray"
+                    />
+
+            </LinearLayout>
+
+            <!--Segmenting line-->
+            <ImageView
+                android:layout_marginTop="24dp"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/colorGray"
+                />
+
+            <!-- diaplay setting -->
+            <LinearLayout
+                android:id="@+id/activity_personal_center_setting_linearlayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+                <!-- display function icon and name -->
+                <LinearLayout
+                    android:gravity="center_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:src="@drawable/ic_setting2"/>
+
+                    <TextView
+                        android:layout_marginLeft="16dp"
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/textsize_large"
+                        android:textColor="@color/colorGrayDeep"
+                        android:text="设置"/>
+
+                    <ImageView
+                        android:layout_marginRight="16dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_arrow_right"/>
+                </LinearLayout>
+
+                <!--Segmenting line-->
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/colorGray"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>

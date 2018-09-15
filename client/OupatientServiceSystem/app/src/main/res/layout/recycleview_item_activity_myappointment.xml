@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="12dp"
+    android:layout_marginRight="12dp"
+    android:layout_marginTop="12dp"
+    app:cardCornerRadius="5dp">
+
+    <LinearLayout
+        android:background="@color/colorWhite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- display 预约挂号 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/activity_my_appointmen_recycleview_item_doctor_name_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="12dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="医生姓名"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/textsize_middle" />
+
+            <TextView
+                android:id="@+id/activity_my_appointmen_recycleview_item_details_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="详情"
+                android:textColor="@color/colorGrayDeep"
+                android:textSize="@dimen/textsize_small2" />
+
+            <ImageView
+                android:id="@+id/activity_my_appointmen_recycleview_item_arrow_imageview"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="16dp"
+                android:src="@drawable/ic_arrow_right" />
+
+        </LinearLayout>
+
+        <!--Segmenting line-->
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorGray" />
+
+        <!-- doctor message -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:background="@color/colorWhite"
+            android:orientation="horizontal">
+
+            <!-- doctor head imageview -->
+            <android.support.v7.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                app:cardCornerRadius="50dp"
+                android:layout_gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/activity_my_appointmen_recycleview_item_doctor_imageview"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/ic_doctor"
+                    android:scaleType="center"/>
+
+            </android.support.v7.widget.CardView>
+
+            <!-- doctoe message -->
+            <LinearLayout
+                android:layout_marginLeft="8dp"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_vertical"
+                android:layout_height="match_parent">
+
+                <!-- hospital -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/textsize_normal"
+                        android:textColor="@color/color_alert_inf"
+                        android:singleLine="true"
+                        android:ellipsize="end"
+                        android:text="医院:"/>
+
+                    <TextView
+                        android:id="@+id/activity_my_appointmen_recycleview_item_doctor_hospital_textview"
+                        android:layout_marginLeft="4dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/textsize_normal"
+                        android:textColor="@color/color_alert_inf"
+                        android:singleLine="true"
+                        android:ellipsize="end"
+                        android:text="医生医院"/>
+
+                </LinearLayout>
+
+                <!-- department -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/textsize_normal"
+                        android:textColor="@color/color_alert_inf"
+                        android:singleLine="true"
+                        android:ellipsize="end"
+                        android:text="科室:"/>
+
+                    <TextView
+                        android:id="@+id/activity_my_appointmen_recycleview_item_doctor_department"
+                        android:layout_marginLeft="4dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/textsize_normal"
+                        android:textColor="@color/color_alert_inf"
+                        android:singleLine="true"
+                        android:ellipsize="end"
+                        android:text="医生科室"/>
+                </LinearLayout>
+
+                <!-- level -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/textsize_normal"
+                        android:textColor="@color/color_alert_inf"
+                        android:singleLine="true"
+                        android:ellipsize="end"
+                        android:text="级别:"/>
+
+                    <TextView
+                        android:id="@+id/activity_my_appointmen_recycleview_item_doctor_level_textview"
+                        android:layout_marginLeft="4dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/textsize_normal"
+                        android:textColor="@color/color_alert_inf"
+                        android:singleLine="true"
+                        android:ellipsize="end"
+                        android:text="医生级别"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- the doctor is collected sign -->
+            <FrameLayout
+                android:id="@+id/activity_my_appointmen_recycleview_item_heart_framelayout"
+                android:layout_marginRight="8dp"
+                android:layout_gravity="end|bottom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:src="@drawable/ic_heart_red"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp" />
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

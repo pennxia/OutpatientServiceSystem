@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:fitsSystemWindows="true"
+    tools:context=".activity.EnrollThreeActivity">
+
+    <!-- toolbar -->
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/activity_enrollthree_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|enterAlways|snap"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="注册"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/textsize_large" />
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <!--the content layout-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <!-- text instruction -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:orientation="horizontal">
+
+            <!-- input phonenumber -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="1 输入手机号"
+                android:textColor="@color/colorGrayDeep"
+                android:textSize="@dimen/textsize_middle" />
+
+            <!-- input verificationcode -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="2 输入验证码"
+                android:textColor="@color/colorGrayDeep"
+                android:textSize="@dimen/textsize_middle" />
+
+            <!-- confirm enroll -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="3 确认注册"
+                android:textColor="@color/colorGrayDeep"
+                android:textSize="@dimen/textsize_middle" />
+
+        </LinearLayout>
+
+        <!-- line instruction -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <!-- line -->
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="2dp"
+                android:layout_weight="1"
+                android:background="@color/colorPrimary" />
+
+            <!-- point -->
+            <ImageView
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:src="@drawable/ic_point_green" />
+
+            <!-- line -->
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="2dp"
+                android:layout_weight="2"
+                android:background="@color/colorPrimary" />
+
+            <!-- point -->
+            <ImageView
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:src="@drawable/ic_point_green" />
+
+            <!-- line -->
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="2dp"
+                android:layout_weight="2"
+                android:background="@color/colorPrimary" />
+
+            <!-- point -->
+            <ImageView
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:src="@drawable/ic_point_green" />
+
+            <!-- line -->
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="2dp"
+                android:layout_weight="1"
+                android:background="@color/colorGray" />
+
+        </LinearLayout>
+
+        <!-- set username -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="32dp"
+                android:gravity="center"
+                android:src="@drawable/ic_username" />
+
+            <EditText
+                android:id="@+id/activity_enrollthree_username_edittext"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="40dp"
+                android:cursorVisible="false"
+                android:ems="10"
+                android:hint="设置用户名(最长10位）"
+                android:inputType="text"
+                android:maxLength="10"
+                android:maxLines="1"
+                android:textSize="@dimen/textsize_large" />
+
+        </LinearLayout>
+
+        <!-- set password -->
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="32dp"
+                android:gravity="center"
+                android:src="@drawable/ic_lock" />
+
+            <EditText
+                android:id="@+id/activity_enrollthree_set_password_edittext"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="40dp"
+                android:cursorVisible="false"
+                android:ems="10"
+                android:hint="设置密码(6 - 16位数字或字母)"
+                android:inputType="textPassword"
+                android:maxLength="16"
+                android:maxLines="1"
+                android:textSize="@dimen/textsize_large" />
+
+        </LinearLayout>
+
+        <!--confirm password -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="32dp"
+                android:gravity="center"
+                android:src="@drawable/ic_lock" />
+
+            <EditText
+                android:id="@+id/activity_enrollthree_confrim_password_edittext"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="40dp"
+                android:cursorVisible="false"
+                android:ems="10"
+                android:hint="确认密码(6 - 16位数字或字母)"
+                android:inputType="textPassword"
+                android:maxLength="16"
+                android:maxLines="1"
+                android:textSize="@dimen/textsize_large" />
+
+        </LinearLayout>
+
+        <!--display enroll button-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="36dp"
+                android:layout_marginRight="32dp"
+                app:cardCornerRadius="24dp">
+
+                <Button
+                    android:id="@+id/activity_enrollthree_enroll_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@color/colorPrimary"
+                    android:text="注册"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/textsize_large" />
+
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+
+        <!-- display user agreement -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="48dp"
+            android:layout_marginRight="32dp"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="注册前请详阅门诊服务系统"
+                android:textColor="@color/color_alert_inf"
+                android:textSize="@dimen/textsize_normal" />
+
+            <TextView
+                android:id="@+id/activity_enrollthree_user_agreement_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="8dp"
+                android:text="用户协议"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/textsize_normal" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!--network cache cardview -->
+    <android.support.v7.widget.CardView
+        android:id="@+id/activity_enrollthree_network_cache_cardview"
+        android:layout_width="160dp"
+        android:layout_height="120dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="180dp"
+        android:visibility="gone"
+        app:cardCornerRadius="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorGray"
+            android:orientation="vertical">
+
+            <ProgressBar
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:indeterminateTint="@color/colorGrayDeep"
+                android:indeterminateTintMode="src_atop" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="bottom"
+                android:gravity="center"
+                android:paddingTop="20dp"
+                android:text="正在验证"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/textsize_normal" />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <!--error cardview -->
+    <android.support.v7.widget.CardView
+        android:id="@+id/activity_enrollthree_error_cardview"
+        android:layout_width="160dp"
+        android:layout_height="120dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="180dp"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:cardCornerRadius="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorGray"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/ic_notice" />
+
+            <TextView
+                android:id="@+id/activity_enrollthree_error_textview"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="bottom"
+                android:gravity="center"
+                android:paddingTop="20dp"
+                android:text="注册失败"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/textsize_normal" />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</android.support.design.widget.CoordinatorLayout>

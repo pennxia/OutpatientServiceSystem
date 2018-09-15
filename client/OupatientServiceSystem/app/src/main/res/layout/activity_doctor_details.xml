@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <!--CollapsingToolbarLayout -> toolbar -->
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:fitsSystemWindows="true">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/activity_doctordetails_collapsing_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:contentScrim="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <ImageView
+                android:id="@+id/doctor_image_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fitsSystemWindows="true"
+                android:scaleType="center"
+                app:layout_collapseMode="parallax" />
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/activity_doctordetails_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin" />
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorGrayShallow2"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--brief introduction all-->
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="35dp"
+                app:cardCornerRadius="12dp">
+
+                <!--control brief introduction simple and details vertical-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <!--brief introduction simple-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="12dp"
+                        android:layout_marginTop="12dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <android.support.v7.widget.CardView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                app:cardCornerRadius="2dp">
+
+                                <ImageView
+                                    android:layout_width="4dp"
+                                    android:layout_height="24dp"
+                                    android:background="@color/colorPrimary" />
+
+                            </android.support.v7.widget.CardView>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="32dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="12dp"
+                                android:gravity="center"
+                                android:text="个人简介"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/textsize_middle" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/activity_doctordetails_introduction_text_textview"
+                            android:layout_width="wrap_content"
+                            android:layout_height="32dp"
+                            android:layout_gravity="end"
+                            android:layout_marginLeft="12dp"
+                            android:gravity="center_vertical"
+                            android:text="展开"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/textsize_normal" />
+
+                        <ImageView
+                            android:id="@+id/activity_doctordetails_introduction_arrow_imageview"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="4dp"
+                            android:src="@drawable/ic_arrow_down" />
+                    </LinearLayout>
+
+                    <!--brief introduction details-->
+                    <TextView
+                        android:id="@+id/activity_doctordetails_introduction_textview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="12dp"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text="医生简介"
+                        android:textColor="@color/color_alert_inf"
+                        android:textSize="@dimen/textsize_normal" />
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <!--docotor Speciality all-->
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="16dp"
+                app:cardCornerRadius="12dp">
+
+                <!--control Speciality simple and details vertical-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <!--Speciality simple-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="12dp"
+                        android:layout_marginTop="12dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <android.support.v7.widget.CardView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                app:cardCornerRadius="2dp">
+
+                                <ImageView
+                                    android:layout_width="4dp"
+                                    android:layout_height="24dp"
+                                    android:background="@color/colorPrimary" />
+
+                            </android.support.v7.widget.CardView>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="32dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="12dp"
+                                android:gravity="center"
+                                android:text="专业特长"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/textsize_middle" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/activity_doctordetails_speciality_text_textview"
+                            android:layout_width="wrap_content"
+                            android:layout_height="32dp"
+                            android:layout_gravity="end"
+                            android:layout_marginLeft="12dp"
+                            android:gravity="center_vertical"
+                            android:text="展开"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/textsize_normal" />
+
+                        <ImageView
+                            android:id="@+id/activity_doctordetails_speciality_arrow_imageview"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="4dp"
+                            android:src="@drawable/ic_arrow_down" />
+
+                    </LinearLayout>
+
+                    <!--Speciality details-->
+                    <TextView
+                        android:id="@+id/activity_doctordetails_speciality_textview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="12dp"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text="医生特长"
+                        android:textColor="@color/color_alert_inf"
+                        android:textSize="@dimen/textsize_normal" />
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <!--display number source-->
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="16dp"
+                app:cardCornerRadius="12dp">
+
+                <!--control brief introduction simple and details vertical-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!--number type-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="12dp"
+                        android:layout_marginTop="12dp"
+                        android:orientation="horizontal">
+
+                        <!--display the can use number sources-->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/activity_doctordetails_available_number_textview"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="4dp"
+                                android:gravity="center"
+                                android:text="可用号源"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="@dimen/textsize_normal" />
+
+                            <ImageView
+                                android:id="@+id/activity_doctordetails_available_number_imageview"
+                                android:layout_width="match_parent"
+                                android:layout_height="4dp"
+                                android:background="@color/colorPrimary" />
+
+                        </LinearLayout>
+
+                        <!--Segmenting line-->
+                        <ImageView
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="8dp"
+                            android:background="@color/colorGray" />
+
+                        <!--display the can't use number sources-->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/activity_doctordetails_all_number_textview"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="4dp"
+                                android:gravity="center"
+                                android:text="全部号源"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/textsize_normal" />
+
+                            <ImageView
+                                android:id="@+id/activity_doctordetails_all_number_imageview"
+                                android:layout_width="match_parent"
+                                android:layout_height="4dp"
+                                android:background="@color/colorWhite" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <!--recycleview,display the number source -->
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/activity_doctordetails_number_source_recycleview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <!--display 我也是有底线的~ -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp"
+                android:orientation="horizontal">
+
+                <!--the left line-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="12dp"
+                    android:layout_weight="1"
+                    android:gravity="start">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/colorGray" />
+
+                </LinearLayout>
+
+                <!--"我也是有底线的~"-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:text="我也是有底线的~"
+                    android:textColor="@color/color_alert_inf"
+                    android:textSize="@dimen/textsize_normal" />
+
+                <!--the right line-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="12dp"
+                    android:layout_weight="1"
+                    android:gravity="end">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/colorGray" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <!--network cache cardview-->
+    <android.support.v7.widget.CardView
+        android:id="@+id/activity_doctordetails_network_cache_cardview"
+        android:layout_width="160dp"
+        android:layout_height="120dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="180dp"
+        android:visibility="gone"
+        app:cardCornerRadius="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorGray"
+            android:orientation="vertical">
+
+            <ProgressBar
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:indeterminateTint="@color/colorGrayDeep"
+                android:indeterminateTintMode="src_atop" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="bottom"
+                android:gravity="center"
+                android:paddingTop="20dp"
+                android:text="正在获取出诊信息"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/textsize_normal" />
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <!-- error cardview ，alter all kinds of error message-->
+    <android.support.v7.widget.CardView
+        android:id="@+id/activity_doctordetails_error_cardview"
+        android:layout_width="160dp"
+        android:layout_height="120dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="180dp"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:cardCornerRadius="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorGray"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/ic_notice" />
+
+            <TextView
+                android:id="@+id/activity_doctordetails_error_textview"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="bottom"
+                android:gravity="center"
+                android:paddingTop="20dp"
+                android:text="网络连接超时"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/textsize_normal" />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/activity_doctordetails_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_heart_white"
+        app:backgroundTint="@color/colorPrimary"
+        app:layout_anchor="@id/appBar"
+        app:layout_anchorGravity="bottom|end" />
+
+
+</android.support.design.widget.CoordinatorLayout>

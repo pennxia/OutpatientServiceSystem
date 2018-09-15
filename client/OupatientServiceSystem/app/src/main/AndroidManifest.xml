@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.nobitastudio.materialdesign">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_icon_app_svg"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/ic_icon_app_svg"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="1f0be201d24f3f5767f8e7e5da5c4937" />
+
+        <activity
+            android:name=".activity.LoginActivity"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- AMap activity -->
+        <activity
+            android:name="com.amap.api.navi.AmapRouteActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <!-- trpay activity -->
+        <activity
+            android:name="com.base.bj.trpayjar.TrPayAcitivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name="com.base.bj.trpayjar.TrPayUnionAcitivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name="com.base.bj.trpayjar.TrSelectListActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <!-- alipay sdk begin -->
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name="com.alipay.sdk.app.H5AuthActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+
+        <!-- my activity -->
+        <activity
+            android:name=".activity.MainActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.OutpatientDepartmentActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".activity.DoctorsListActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/DoctorsListActivityTheme" />
+        <activity
+            android:name=".activity.DoctorDetailsActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/DoctorDetailsActivityTheme" />
+        <activity
+            android:name=".activity.RegisterActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".activity.OutpatientRegisterDetailsActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".activity.RegisterResultActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".activity.TestActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".activity.PersonalCenterActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".activity.RegisterDetailsActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".activity.MyAppointmentActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".activity.MyDoctorActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".activity.MyMedicalCardsActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".activity.MyElectronicCaseActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".activity.SettingActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".activity.EnrollOneActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".activity.EnrollTwoActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".activity.EnrollThreeActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".activity.ForgetPasswordOneActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".activity.ForgetPasswordTwoActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".activity.ForgetPasswordThreeActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".activity.UserAgreementActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".activity.CreateMedicalCardTwoActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".activity.BindMedicalCardTwoActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".activity.CreateMedicalCardOneActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".activity.CreateMedicalCardThreeActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".activity.BindMedicalCardOneActivity"
+            android:launchMode="singleTask" />
+        <activity android:name=".activity.HealthNewsActivity" />
+        <activity android:name=".activity.OutpatientPaymentActivity" />
+        <activity android:name=".activity.NavigationHospitalGuideActivity" />
+        <activity android:name=".activity.PaymentDetailsActivity" />
+        <activity android:name=".activity.IntelligentFindOutpatient" />
+        <activity android:name=".activity.OnlineConsultingActivity" />
+        <activity android:name=".activity.OutpatientIntroductionActivity" />
+        <activity android:name=".activity.ExampleActivity" />
+        <activity android:name=".activity.DrugDetailsActivity" />
+        <activity android:name=".activity.CheckInspectionDetailsActivity" />
+        <activity android:name=".activity.OperationDetailsActivity" />
+        <activity android:name=".activity.MedicalCardDetailsActivity"></activity>
+    </application>
+
+</manifest>

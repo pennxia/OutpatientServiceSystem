@@ -1,0 +1,530 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:fitsSystemWindows="true"
+    tools:context=".activity.CreateMedicalCardThreeActivity">
+
+    <!-- toolbar -->
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/activity_createmedicalcardthree_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="办理诊疗卡"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/textsize_large" />
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <!-- display the top -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <!-- text instruction -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:orientation="horizontal">
+
+                <!-- input phonenumber -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="1 绑定手机号"
+                    android:textColor="@color/colorGrayDeep"
+                    android:textSize="@dimen/textsize_middle" />
+
+                <!-- input verificationcode -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="2 输入验证码"
+                    android:textColor="@color/colorGrayDeep"
+                    android:textSize="@dimen/textsize_middle" />
+
+                <!-- confirm enroll -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="3 确认办理"
+                    android:textColor="@color/colorGrayDeep"
+                    android:textSize="@dimen/textsize_middle" />
+
+            </LinearLayout>
+
+            <!-- line instruction -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:layout_marginTop="8dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <!-- line -->
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="2dp"
+                    android:layout_weight="1"
+                    android:background="@color/colorPrimary" />
+
+                <!-- point -->
+                <ImageView
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:src="@drawable/ic_point_green" />
+
+                <!-- line -->
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="2dp"
+                    android:layout_weight="2"
+                    android:background="@color/colorPrimary" />
+
+                <!-- point -->
+                <ImageView
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:src="@drawable/ic_point_green" />
+
+                <!-- line -->
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="2dp"
+                    android:layout_weight="2"
+                    android:background="@color/colorPrimary" />
+
+                <!-- point -->
+                <ImageView
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:src="@drawable/ic_point_green" />
+
+                <!-- line -->
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="2dp"
+                    android:layout_weight="1"
+                    android:background="@color/colorGray" />
+
+            </LinearLayout>
+
+            <!--display name -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="12dp"
+                    android:src="@drawable/ic_medical_card_ownername" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="12dp"
+                    android:text="姓名:"
+                    android:textColor="@color/color_alert_inf"
+                    android:textSize="@dimen/textsize_middle" />
+
+                <!--edittext-->
+                <EditText
+                    android:id="@+id/activity_createmedicalcardthree_name_edittext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:cursorVisible="false"
+                    android:gravity="center"
+                    android:hint="请输入姓名"
+                    android:maxLength="10"
+                    android:maxLines="1"
+                    android:textSize="@dimen/textsize_large" />
+
+            </LinearLayout>
+
+            <!--Segmenting line-->
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/colorGray" />
+
+            <!--display sex -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="12dp"
+                    android:src="@drawable/ic_sex" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="12dp"
+                    android:text="性别:"
+                    android:textColor="@color/color_alert_inf"
+                    android:textSize="@dimen/textsize_middle" />
+
+                <!--edittext-->
+                <EditText
+                    android:id="@+id/activity_createmedicalcardthree_sex_edittext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:cursorVisible="false"
+                    android:gravity="center"
+                    android:hint="请输入性别"
+                    android:maxLength="3"
+                    android:maxLines="1"
+                    android:textSize="@dimen/textsize_large" />
+
+            </LinearLayout>
+
+            <!--Segmenting line-->
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/colorGray" />
+
+            <!--Segmenting line-->
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/colorGray" />
+
+            <!--display idcard-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="12dp"
+                    android:src="@drawable/ic_idcard" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="12dp"
+                    android:text="身份证号:"
+                    android:textColor="@color/color_alert_inf"
+                    android:textSize="@dimen/textsize_middle" />
+
+                <!--edittext-->
+                <EditText
+                    android:id="@+id/activity_createmedicalcardthree_idcard_edittext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:cursorVisible="false"
+                    android:gravity="center"
+                    android:hint="请输入身份证号"
+                    android:maxLength="18"
+                    android:maxLines="1"
+                    android:textSize="@dimen/textsize_large" />
+
+            </LinearLayout>
+
+            <!--Segmenting line-->
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/colorGray" />
+
+            <!--display address-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="12dp"
+                    android:src="@drawable/ic_location" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="12dp"
+                    android:text="联系地址:"
+                    android:textColor="@color/color_alert_inf"
+                    android:textSize="@dimen/textsize_middle" />
+
+                <!--edittext-->
+                <EditText
+                    android:id="@+id/activity_createmedicalcardthree_address_edittext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:cursorVisible="false"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:hint="请输入联系地址"
+                    android:singleLine="true"
+                    android:textSize="@dimen/textsize_large" />
+
+            </LinearLayout>
+
+            <!--Segmenting line-->
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/colorGray" />
+
+            <!--Segmenting line-->
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/colorGray" />
+
+            <!--Segmenting line-->
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/colorGray" />
+
+            <!-- dis alert inf 1-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="16dp"
+                android:gravity="start"
+                android:text="注意事项："
+                android:textColor="@color/colorRed2"
+                android:textSize="@dimen/textsize_middle" />
+
+            <!-- dis alert inf 2-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:gravity="start"
+                android:text="1、请保证所填信息真实有效、准确无误、避免影响就诊。"
+                android:textColor="@color/colorRed2"
+                android:textSize="@dimen/textsize_middle" />
+
+            <!-- dis alert inf 3-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:gravity="start"
+                android:text="2、请用户到达医院后通过注册诊疗卡的身份证（儿童需要携带户口簿原件）在诊疗卡自助机上或办卡窗口处领取属于您的实物诊疗卡。领取后再携带该诊疗卡到对应诊间就诊。虚拟诊疗卡只会保存就诊信息，并不能看诊。"
+                android:textColor="@color/colorRed2"
+                android:textSize="@dimen/textsize_middle" />
+
+            <!-- dis alert inf 4-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:gravity="start"
+                android:text="3、若您已拥有实物诊疗卡，则不需要再注册该虚拟诊疗卡，直接绑定即可。"
+                android:textColor="@color/colorRed2"
+                android:textSize="@dimen/textsize_middle" />
+
+            <!-- dis alert inf 5-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:gravity="start"
+                android:text="4、在您成功办理诊疗卡后，该诊疗卡将自动绑定至该账户，可在诊疗卡功能中查看或取消绑定。"
+                android:textColor="@color/colorRed2"
+                android:textSize="@dimen/textsize_middle" />
+
+            <!-- dis alert inf 6-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:gravity="start"
+                android:text="5、同一手机号最多仅能办理5张诊疗卡。"
+                android:textColor="@color/colorRed2"
+                android:textSize="@dimen/textsize_middle" />
+
+            <!-- let the view see normal -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="72dp" />
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <!-- create medical card button -->
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="18dp"
+        android:layout_marginLeft="36dp"
+        android:layout_marginRight="36dp"
+        app:cardCornerRadius="24dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/activity_createmedicalcardthree_agreeandcreate_button"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:background="@color/colorPrimary"
+                android:gravity="center"
+                android:text="同意并办理诊疗卡"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/textsize_middle" />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <!--network cache cardview-->
+    <android.support.v7.widget.CardView
+        android:id="@+id/activity_createmedicalcardthree_networkcache_cardview"
+        android:layout_width="160dp"
+        android:layout_height="120dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="180dp"
+        android:visibility="gone"
+        app:cardCornerRadius="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorGray"
+            android:orientation="vertical">
+
+            <ProgressBar
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:indeterminateTint="@color/colorGrayDeep"
+                android:indeterminateTintMode="src_atop" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="bottom"
+                android:gravity="center"
+                android:paddingTop="20dp"
+                android:text="正在创建,请稍后"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/textsize_normal" />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <!-- error cardview ，alter all kinds of error message-->
+    <android.support.v7.widget.CardView
+        android:id="@+id/activity_createmedicalcardthree_error_cardview"
+        android:layout_width="160dp"
+        android:layout_height="120dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="180dp"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:cardCornerRadius="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorGray"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/ic_notice" />
+
+            <TextView
+                android:id="@+id/activity_createmedicalcardthree_error_textview"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="bottom"
+                android:gravity="center"
+                android:paddingTop="20dp"
+                android:text="网络连接超时"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/textsize_normal" />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</android.support.design.widget.CoordinatorLayout>

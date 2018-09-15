@@ -1,0 +1,541 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGrayShallow"
+    android:fitsSystemWindows="true"
+    tools:context=".activity.MedicalCardDetailsActivity">
+
+    <!-- toolbar -->
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/activity_medicalcarddetails_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="诊疗卡详情"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/textsize_large" />
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <!-- let content can slide -->
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <!-- all content -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!-- one hospital information-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorWhite"
+                android:orientation="horizontal">
+
+                <!-- the green line before introductin -->
+                <android.support.v7.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="18dp"
+                    android:layout_marginTop="8dp"
+                    app:cardCornerRadius="2dp">
+
+                    <ImageView
+                        android:layout_width="4dp"
+                        android:layout_height="24dp"
+                        android:background="@color/colorPrimary" />
+                </android.support.v7.widget.CardView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:text="医院信息"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/textsize_middle" />
+
+            </LinearLayout>
+
+            <!-- segmentation lines -->
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/colorGray" />
+
+            <!-- hospital information -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@color/colorWhite"
+                android:orientation="horizontal">
+
+                <!--hospital trademark-->
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="24dp"
+                    android:contentDescription="@string/nav_header_desc"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/hospital_trademark"
+                    app:civ_border_color="#00000000"
+                    app:civ_border_width="2dp" />
+
+                <!-- hospital introduction -->
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="12dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <!-- hospital name -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="start"
+                            android:text="石河子大学第一附属医院"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/textsize_large" />
+
+                        <!--hospital address-->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginTop="12dp"
+                            android:gravity="start"
+                            android:text="地址：石河子市 北二路 107号"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/textsize_middle" />
+
+                    </LinearLayout>
+                </FrameLayout>
+            </LinearLayout>
+
+            <!-- two medical card details-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="6dp"
+                android:background="@color/colorWhite"
+                android:orientation="horizontal">
+
+                <!-- the green line before introductin -->
+                <android.support.v7.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="18dp"
+                    android:layout_marginTop="8dp"
+                    app:cardCornerRadius="2dp">
+
+                    <ImageView
+                        android:layout_width="4dp"
+                        android:layout_height="24dp"
+                        android:background="@color/colorPrimary" />
+                </android.support.v7.widget.CardView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:text="诊疗卡详情"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/textsize_middle" />
+
+            </LinearLayout>
+
+            <!-- segmentation lines -->
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/colorGray" />
+
+            <!-- owner name -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="36dp"
+                    android:layout_marginTop="8dp"
+                    android:text="持卡人:"
+                    android:textColor="@color/color_alert_inf"
+                    android:textSize="@dimen/textsize_middle" />
+
+                <!-- owner name -->
+                <TextView
+                    android:id="@+id/activity_medicalcarddetails_ownername_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text=""
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/textsize_middle" />
+
+            </LinearLayout>
+
+            <!-- medicalcard no -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="36dp"
+                    android:layout_marginTop="8dp"
+                    android:text="卡号:"
+                    android:textColor="@color/color_alert_inf"
+                    android:textSize="@dimen/textsize_middle" />
+
+                <!-- medicalcard no -->
+                <TextView
+                    android:id="@+id/activity_medicalcarddetails_medicalcardno_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text=""
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/textsize_middle" />
+
+            </LinearLayout>
+
+            <!-- owner sex-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="36dp"
+                    android:layout_marginTop="8dp"
+                    android:text="性别:"
+                    android:textColor="@color/color_alert_inf"
+                    android:textSize="@dimen/textsize_middle" />
+
+                <!-- owner sex-->
+                <TextView
+                    android:id="@+id/activity_medicalcarddetails_ownersex_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text=""
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/textsize_middle" />
+
+            </LinearLayout>
+
+            <!-- owner idcard -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="36dp"
+                    android:layout_marginTop="8dp"
+                    android:text="身份证号:"
+                    android:textColor="@color/color_alert_inf"
+                    android:textSize="@dimen/textsize_middle" />
+
+                <!-- owner idcard -->
+                <TextView
+                    android:id="@+id/activity_medicalcarddetails_owneridcard_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text=""
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/textsize_middle" />
+
+            </LinearLayout>
+
+            <!-- three item need attention-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="6dp"
+                android:background="@color/colorWhite"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="18dp"
+                    android:layout_marginTop="8dp"
+                    app:cardCornerRadius="2dp">
+
+                    <ImageView
+                        android:layout_width="4dp"
+                        android:layout_height="24dp"
+                        android:background="@color/colorPrimary" />
+                </android.support.v7.widget.CardView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:text="注意事项"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/textsize_middle" />
+
+            </LinearLayout>
+
+            <!-- segmentation lines -->
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/colorGray" />
+
+            <!-- three item need attention 1 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="36dp"
+                    android:text="1:"
+                    android:textColor="@color/colorRed2"
+                    android:textSize="@dimen/textsize_middle" />
+
+                <!-- dis alert inf 4-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:gravity="start"
+                    android:text="诊疗卡解绑后,相关门诊,住院等记录将不在本账号显示。"
+                    android:textColor="@color/colorRed2"
+                    android:textSize="@dimen/textsize_middle" />
+
+            </LinearLayout>
+
+            <!-- three item need attention 2-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="36dp"
+                    android:text="2:"
+                    android:textColor="@color/colorRed2"
+                    android:textSize="@dimen/textsize_middle" />
+
+                <!-- dis alert inf 4-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:gravity="start"
+                    android:text="诊疗卡解绑后,30日后才可再次被绑定。"
+                    android:textColor="@color/colorRed2"
+                    android:textSize="@dimen/textsize_middle" />
+
+            </LinearLayout>
+
+            <!-- if the ui need button at bottom.we add this view to let the view see normal -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="72dp" />
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <!-- unbind -->
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="18dp"
+        android:layout_marginLeft="36dp"
+        android:layout_marginRight="36dp"
+        app:cardCornerRadius="24dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/activity_medicalcarddetails_agreeandunbind_button"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:background="@color/colorPrimary"
+                android:gravity="center"
+                android:text="同意并解绑该诊疗卡"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/textsize_middle" />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <!--network cache cardview-->
+    <android.support.v7.widget.CardView
+        android:id="@+id/activity_medicalcarddetails_networkcache_cardview"
+        android:layout_width="160dp"
+        android:layout_height="120dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="180dp"
+        android:visibility="gone"
+        app:cardCornerRadius="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorGray"
+            android:orientation="vertical">
+
+            <ProgressBar
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:indeterminateTint="@color/colorGrayDeep"
+                android:indeterminateTintMode="src_atop" />
+
+            <TextView
+                android:id="@+id/activity_medicalcarddetails_networkcache_textview"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="bottom"
+                android:gravity="center"
+                android:paddingTop="20dp"
+                android:text="正在加载"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/textsize_normal" />
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    <!-- error cardview ，alter all kinds of error message-->
+    <android.support.v7.widget.CardView
+        android:id="@+id/activity_medicalcarddetails_error_cardview"
+        android:layout_width="160dp"
+        android:layout_height="120dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="180dp"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:cardCornerRadius="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorGray"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/ic_notice" />
+
+            <TextView
+                android:id="@+id/activity_medicalcarddetails_error_textview"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="bottom"
+                android:gravity="center"
+                android:paddingTop="20dp"
+                android:text="网络连接失败"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/textsize_normal" />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</android.support.design.widget.CoordinatorLayout>

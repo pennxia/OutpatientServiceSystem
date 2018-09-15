@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="json-lib-2.4-jdk15">
+    <CLASSES>
+      <root url="jar://D:/Study/毕业设计/jar/json-lib-2.4-jdk15.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://D:/Study/毕业设计/jar/json-lib-2.4-jdk15-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://D:/Study/毕业设计/jar/json-lib-2.4-jdk15-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

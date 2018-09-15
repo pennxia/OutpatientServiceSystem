@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:fitsSystemWindows="true"
+    tools:context=".activity.RegisterActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/activity_register_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="挂号"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/textsize_large" />
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <!-- content -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="24dp"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <!-- display the top -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <!--display the fist line-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="12dp"
+                    android:text="就诊科室:"
+                    android:textColor="@color/color_alert_inf"
+                    android:textSize="@dimen/textsize_middle" />
+
+                <!--就诊科室-->
+                <TextView
+                    android:id="@+id/activity_register_outpatientdepartment_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="就诊科室"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/textsize_middle" />
+
+            </LinearLayout>
+
+            <!--display the second line-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="12dp"
+                    android:text="医生姓名:"
+                    android:textColor="@color/color_alert_inf"
+                    android:textSize="@dimen/textsize_middle" />
+
+                <!-- doctor name-->
+                <TextView
+                    android:id="@+id/activity_register_doctorname_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="医生姓名"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/textsize_middle" />
+            </LinearLayout>
+
+            <!--display the third line-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="12dp"
+                    android:text="就诊时间:"
+                    android:textColor="@color/color_alert_inf"
+                    android:textSize="@dimen/textsize_middle" />
+
+                <!-- 就诊时间-->
+                <TextView
+                    android:id="@+id/activity_register_yearmonthdate_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="年-月-日"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/textsize_middle" />
+            </LinearLayout>
+
+            <!--display the fourth line-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="12dp"
+                    android:text="就诊时段:"
+                    android:textColor="@color/color_alert_inf"
+                    android:textSize="@dimen/textsize_middle" />
+
+                <!--就诊时段-->
+                <TextView
+                    android:id="@+id/activity_register_timeslot_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="就诊时段"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/textsize_middle" />
+
+            </LinearLayout>
+
+            <!--display the fiveth line-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="12dp"
+                    android:text="就诊地点:"
+                    android:textColor="@color/color_alert_inf"
+                    android:textSize="@dimen/textsize_middle" />
+
+                <!-- 就诊地点 -->
+                <TextView
+                    android:id="@+id/activity_register_address_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="就诊地点"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/textsize_middle" />
+
+            </LinearLayout>
+
+            <!--display the sixth line-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="12dp"
+                    android:text="预约挂号费:"
+                    android:textColor="@color/color_alert_inf"
+                    android:textSize="@dimen/textsize_middle" />
+
+                <!-- 预约挂号费 -->
+                <TextView
+                    android:id="@+id/activity_register_cost_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="挂号费"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/textsize_middle" />
+            </LinearLayout>
+
+            <!--Segmenting line-->
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginTop="6dp"
+                android:background="@color/colorGray" />
+
+            <!--display the patient module-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="12dp"
+                    android:layout_weight="1"
+                    android:text="就诊人:"
+                    android:textColor="@color/color_alert_inf"
+                    android:textSize="@dimen/textsize_middle" />
+
+                <TextView
+                    android:id="@+id/activity_register_choose_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="4dp"
+                    android:text="请选择"
+                    android:textColor="@color/color_alert_inf"
+                    android:textSize="@dimen/textsize_middle" />
+
+                <ImageView
+                    android:id="@+id/activity_register_choose_imageview"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_arrow_right" />
+
+            </LinearLayout>
+
+            <!--Segmenting line-->
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/colorGray" />
+
+            <!--display the Verification Code module-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="12dp"
+                    android:text="验证码:"
+                    android:textColor="@color/color_alert_inf"
+                    android:textSize="@dimen/textsize_middle" />
+
+                <EditText
+                    android:id="@+id/activity_register_pictureverificationcode_edittext"
+                    android:layout_width="88dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="4dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:cursorVisible="false"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:hint="请输入右侧验证码"
+                    android:inputType="number"
+                    android:maxLength="6"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/textsize_middle" />
+
+                <ImageView
+                    android:id="@+id/activity_register_pictrueverificationcode_imageview"
+                    android:layout_width="104dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/verificationcode_cache"
+                    android:scaleType="fitXY" />
+
+            </LinearLayout>
+
+            <!--Segmenting line-->
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/colorGray" />
+
+            <!-- dis play the alert inf-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="16dp"
+                android:text="注意事项：请在30分钟内支付，逾期作废。逾期超5次将会冻结就诊卡"
+                android:textColor="@color/colorRed2"
+                android:textSize="@dimen/textsize_middle" />
+
+        </LinearLayout>
+
+        <!-- display the register button-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:cardCornerRadius="24dp">
+
+                <Button
+                    android:id="@+id/activity_register_confirm_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@color/colorPrimary"
+                    android:text="确定"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/textsize_large" />
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!--network cache cardview-->
+    <android.support.v7.widget.CardView
+        android:id="@+id/activity_register_network_cache_cardview"
+        android:layout_width="160dp"
+        android:layout_height="120dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="180dp"
+        android:visibility="gone"
+        app:cardCornerRadius="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorGray"
+            android:orientation="vertical">
+
+            <ProgressBar
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:indeterminateTint="@color/colorGrayDeep"
+                android:indeterminateTintMode="src_atop" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="bottom"
+                android:gravity="center"
+                android:paddingTop="20dp"
+                android:text="正在为您挂号"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/textsize_normal" />
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <!-- error cardview-->
+    <android.support.v7.widget.CardView
+        android:id="@+id/activity_register_error_cardview"
+        android:layout_width="160dp"
+        android:layout_height="120dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="180dp"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:cardCornerRadius="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorGray"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/ic_notice" />
+
+            <TextView
+                android:id="@+id/activity_register_error_textview"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="bottom"
+                android:gravity="center"
+                android:paddingTop="20dp"
+                android:text="网络连接超时"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/textsize_normal" />
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</android.support.design.widget.CoordinatorLayout>

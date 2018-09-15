@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+    <!-- date source-->
+    <bean id="dataSource" class="com.jolbox.bonecp.BoneCPDataSource">
+        <property name="driverClass" value="oracle.jdbc.driver.OracleDriver"/>
+        <property name="jdbcUrl" value="jdbc:oracle:thin:@localhost:1521:orcl"/>
+        <property name="username" value="outpatientservice"/>
+        <property name="password" value="cx19970522"/>
+        <!--设置connection 的间隔时间，这个参数默认为240，单位：分钟，设置为0该功能失效-->
+        <property name="idleConnectionTestPeriodInMinutes" value="30"/>
+        <!--设置connection的空闲存活时间，这个参数默认为60，单位：分钟。设置0表示功能失效-->
+        <property name="idleMaxAgeInMinutes" value="60"/>
+        <!--设置每个分区含有connection的最大个数，这个参数默认为2,。如果小于2，BoneCP设置为50-->
+        <property name="maxConnectionsPerPartition" value="10"/>
+        <!--设置每个分区含有connection最小个数 默认值为0-->
+        <property name="minConnectionsPerPartition" value="1"/>
+        <!--设置分区个数，这个参数默认为1，建议3-4（根据特定应用程序而定）-->
+        <property name="partitionCount" value="3"/>
+        <!--设置分区中connection增长数量，这个参数默认为1-->
+        <property name="acquireIncrement" value="3"/>
+        <!-- 设置statement 缓存个数，这个参数默认值为0-->
+        <property name="statementsCacheSize" value="1"/>
+    </bean>
+
+    <!-- transaction manager-->
+    <bean id="transactionMagager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dataSource"></property>
+    </bean>
+    <tx:annotation-driven transaction-manager="transactionMagager"/>
+
+    <!-- jdbc template-->
+    <bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+</beans>
